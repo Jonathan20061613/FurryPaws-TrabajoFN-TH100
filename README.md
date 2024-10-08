@@ -23,4 +23,4 @@ Este proyecto ha sido creado por Edna Rodriguez y Jonathan Jimenez. ¡Úsalo y e
 
 ---
 
-🌟 **AdoptMe** - Porque cada mascota merece un hogar lleno de amor. 🌟
+🌟 **Furry Tails** - Porque cada mascota merece un hogar lleno de amor. 🌟
