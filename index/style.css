@@ -1,175 +1,175 @@
-/* Estilos generales */
-body {
-    font-family: Arial, sans-serif;
+/* ----------------------------------------- import styles ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+/* ----------------------------------------- * ------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
 }
 
-/* Navbar */
-.navbar {
+/* ----------------------------------------- VARIABLES ------------------------------------------------- */
+
+:root {
+    /* tipografia */
+    --fuente1: "Figtree", serif;
+    /* color para el texto (p)*/
+    --color-primary: #000000;
+    --color-secundary: #ffffff;
+    --color-1: #1a8510;
+    --color-2: #012A4A;
+}
+
+/* ----------------------------------------- HEADER ------------------------------------------------- */
+
+.header {
+    margin: 0;
+    width: 100%; /* Cambiado a 100% para ocupar todo el ancho */
+    height: 100vh; /* Cambiado a auto para ajustarse al contenido */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Cambiado para que el contenido se apile verticalmente */
+}
+
+/* --------- barra nav -------- */
+.container-navBar {
+    border: solid 1px rgb(255, 174, 0);
+    width: 100%;
+    height: 17%; /* Mantiene la altura */
+    padding: 0 20px; /* Padding lateral */
+    display: flex;
     align-items: center;
-    background-color: #fff;
-    padding: 1rem 2rem;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    gap: 5vw;
+    font-family: var(--fuente1);
+    font-size: large;
+    padding-left: 70px;
+    padding-right: 90px;
 }
 
-.logo img {
-    width: 80px;
+/* -------- logo -------- */
+.logo-navBar {
+    margin-right: 20px; /* Espacio entre el logo y la lista */
 }
 
-.nav-links ul {
-    list-style: none;
-    display: flex;
-}
-
-.nav-links ul li {
-    margin: 0 1.5rem;
-}
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: #000;
+/* -------- Nav Bar -------- */
+.navBar-list {
+    width: 45vw; /* Ancho de la lista */
+    height: 5vh; /* Altura de la lista */
+    display: flex; /* Mantiene la lista en fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    gap: 4vw; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina el margen para que no desplace */
+    padding: 0; /* Elimina el padding para que no desplace */
     font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.315); /* Color de fondo */
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    justify-content: center; /* Centra los elementos dentro de la lista */
+    align-items: center; /* Alinea verticalmente los elementos dentro de la lista */
 }
 
-.login button {
-    background-color: #1abc9c;
-    border: none;
-    padding: 0.5rem 1rem;
-    color: white;
+/* Quitar subrayado de los enlaces */
+.navBar-list a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--color-primary); /* Asegúrate de que el color sea visible */
+}
+
+/* -------- button login -------- */
+.button-login {
+    width: 7vw;
+    height: 5vh;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    background-color: var(--color-1);
+    border-radius: 50px;
     font-weight: bold;
-    border-radius: 5px;
+    border: solid 4px rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-left: 20px; /* Espacio entre el botón de login y la lista */
 }
 
-.login a {
-    text-decoration: none;
-    color: white;
+/* Quitar subrayado del enlace de login */
+.button-login a {
+    text-decoration: none; /* Elimina el subrayado del enlace de login */
+    color: var(--color-secundary); /* Asegúrate de que el color sea visible */
 }
 
-.register img {
-    width: 40px;
-}
-
-/* Banner Section */
-.banner {
-    position: relative;
+/* -------- icon user -------- */
+.icon {
     width: auto;
-    height: 70vh; /* Puedes ajustar la altura */
-    border: solid salmon, 5px;
-}
-
-.banner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
-}
-
-.banner-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente para el texto */
-    padding: 1rem;
+    height: 70px;
+    background-color: var(--color-2);
+    border: solid 4px rgb(255, 255, 255);
     border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-left: 20px; /* Espacio entre el botón de login y el ícono de usuario */
 }
 
-.banner-text h2 {
-    font-size: 2rem;
+.icon svg {
+    fill: white; /* Cambia el color del ícono a blanco */
+    width: 60px; /* Ajusta el tamaño del ícono a 40px */
+    height: 40px; /* Ajusta el alto del ícono a 40px */
 }
 
-.banner-text p {
-    font-size: 1.2rem;
-}
-
-/* main */
-/* Main Content */
-.main-content {
-    padding: 2rem;
-    background-color: #f9f9f9;
-}
-
-.intro {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.intro h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.intro p {
-    font-size: 1.1rem;
-    color: #555;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.pet-gallery {
-    margin-bottom: 3rem;
-}
-
-.pet-gallery h3 {
-    text-align: center;
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.gallery {
+/* -------- banner -------- */
+.container-baner{
+    height: 83%;
+    width: 100%;
+    background-image: url('/index/assetsIndex/imgBanner-gato.jpg'); /* Cambia la ruta a tu imagen de fondo */
+    background-size: cover; /* Asegura que la imagen cubra el área */
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.pet-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin: 1rem;
-    padding: 1rem;
+    color: white; /* Color del texto en el banner */
 }
 
-.pet-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 10px;
+.banner-content {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    padding: 20px; /* Padding para el contenido */
+    border-radius: 10px; /* Bordes redondeados */
 }
 
-.pet-card h4 {
-    font-size: 1.5rem;
-    color: #333;
-    margin: 0.5rem 0;
+/* -------- main -------- */
+.container {
+    max-width: 1200px; /* Limitar el ancho del contenido */
 }
 
-.pet-card p {
-    font-size: 1rem;
-    color: #555;
-    margin-bottom: 1rem;
+/* -------- service cards -------- */
+.service-card {
+    background-color: #ffffff; /* Color de fondo de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
 }
 
-.pet-card button {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
+/* -------- adoption cards -------- */
+.adoption-card {
+    background-color: #ffffff; /* Color de fondo de las tarjetas */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra para las tarjetas */
 }
 
-.pet-card button:hover {
-    background-color: #16a085;
+/* -------- footer -------- */
+footer {
+    background-color: var(--color-2);
+    color: var(--color-secundary); /* Color del texto en el pie de página */
+    padding: 20px;
 }
 
-.cta {
-    text-align: center;
-    background-color: #eaeaea;
-    padding: 2rem;
-    border-radius: 10px;
+footer a {
+    color: var(--color-secundary); /* Color de los enlaces en el pie de página */
+    text-decoration: none; /* Sin subrayado */
 }
 
+footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
+
+
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+/* ----------------------------------------- import styles ------------------------------------------------- */
