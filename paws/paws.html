@@ -1,87 +1,109 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/paws/paws.css">
+    <title>Furry Tails</title>
+    <link rel="stylesheet" href="../paws/paws.css">
 </head>
 
 <body>
 
-    <!-- Inicio  pagina Paws -->
-
-    <header class="header">
-
+    <header class="navbar">
         <nav class="container-navBar">
             <a href="/index.html" class="logo-navBar">
-                <img src="/index/assetsIndex/logo.png" alt="Logo Página" id="logoPagina">
+                <img src="../index/assetsIndex/logo.png" alt="Logo Furry Paws" id="logoPagina">
             </a>
 
             <ul class="navBar-list">
                 <li><a href="/paws/paws.html">PAWS</a></li>
-                <li><a href="/nuestroBlog/nuestroBlog.html">NUESTRO BLOG</a></li>
                 <li><a href="/sobreNosotros/sobreNosotros.html">SOBRE NOSOTROS</a></li>
                 <li><a href="/contactanos/contactanos.html">CONTÁCTANOS</a></li>
             </ul>
 
-            <button class="button-login">
+            <div class="button-login">
                 <a href="/login/login.html" id="login">LOGIN</a>
-            </button>
-
-            <button class="icon">
-                <a href="/usuario/usuario.html">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg>
-                </a>
-            </button>
-
+            </div>
         </nav>
 
     </header>
 
-    <main>
-        <section class="containergeneral">
-            <h1 class="title"> OUR PAWS </h1>
-
-            <img class=" animales" src="mascotas.png" alt="">
-            <p>
-                <container class=" texto">
-                    ¡Adopta una mascota, cambia una vida!
-
-                    En nuestro sitio, creemos que cada mascota merece un hogar lleno de amor. Aquí encontrarás
-                    perros y
-                    gatos de todas las edades y personalidades, esperando por esa familia especial que les dé una
-                    segunda
-                    oportunidad. Al adoptar, no solo estás brindando un refugio a un animal, también estás ganando
-                    un
-                    compañero leal que llenará tu vida de cariño y alegría.
-
-                    Adoptar es un acto de amor que salva vidas. Cada vez que eliges adoptar, liberas espacio para
-                    que otro
-                    animal necesitado también reciba la ayuda que tanto merece. ¡Juntos podemos hacer la diferencia!
-
-                    Visítanos y descubre cómo puedes cambiar el mundo, una mascota a la vez. ¡Tu nuevo mejor amigo
-                    te está
-                    esperando!
-            </p>
-            </container>
+    <!-- Banner Section -->
+    <section class="banner">
+        <img src="../paws/assetsPaws/Titulo paws.png" alt="Banner our paws">
+    </section>
+    <main class="main-content">
+        <section class="intro">
+            <h2>Bienvenido a Furry Tails</h2>
+            <p>En Furry Tails, nos dedicamos a conectar mascotas en busca de un hogar amoroso con familias que desean
+                darles una segunda oportunidad. Explora nuestras opciones de adopción y encuentra el compañero perfecto
+                para ti.</p>
         </section>
 
+        <section class="pet-gallery">
+            <h3>Nuestras mascotas disponibles</h3>
+            <div class="gallery">
+                <div class="pet-card">
+                    <img src="../paws/assetsPaws/Contenedor Tequila.png" alt="Tequila">
+                    <h4>¡Conoce a Tequila, el Compañero Perfecto que Estás Buscando! 🐾</h4>
+                    <p>Tequila es un perro cariñoso y amigable que busca un hogar lleno de amor. Le encanta jugar al
+                        aire libre, pasear y recibir mimos. Es muy sociable tanto con personas como con otros animales,
+                        lo que lo convierte en el compañero ideal para familias o individuos activos. Está vacunado,
+                        esterilizado y en excelente estado de salud. ¡No pierdas la oportunidad de darle a Tequila el
+                        hogar que se merece!</p>
+                    <button>Adoptar</button>
+                </div>
+                <div class="pet-card">
+                    <img src="../paws/assetsPaws/Ginebra.png" alt="Ginebra">
+                    <h4>¡Ginebra es una hermosa gatita llena de ternura y curiosidad! 🐱💖</h4>
+                    <p>Ginebra está vacunada, desparasitada y esterilizada. Busca un hogar lleno de amor donde pueda dar
+                        todo su cariño. Si estás interesado en darle una segunda oportunidad y mucho amor, ¡contáctanos!
+                    </p>
+                    <button>Adoptar</button>
+                </div>
+                <div class="pet-card">
+                    <img src="../paws/assetsPaws/Contenedor whisky.png" alt="Whisky">
+                    <h4>¡Conoce a Whisky, el Gato que Llenará tu Hogar de Cariño y Aventura! 🐱💫</h4>
+                    <p>Whisky es un gato curioso y cariñoso que está en busca de un hogar donde pueda disfrutar de todas
+                        sus travesuras felinas. Le encanta explorar su entorno, jugar y luego relajarse en un lugar
+                        cómodo. Whisky es muy sociable con personas y otros gatos, lo que lo convierte en el compañero
+                        perfecto para cualquier tipo de hogar. Está esterilizado, vacunado y listo para formar parte de
+                        tu vida. ¡Adopta a Whisky y dale la oportunidad de mostrarte todo su amor!</p>
+                    <button>Adoptar</button>
+                </div>
+                <div class="pet-card">
+                    <img src="../paws/assetsPaws/Contendor Lucas.png" alt="Lucas">
+                    <h4>¡Conoce a Lucas, el Gato que Robará tu Corazón! 🐱💖</h4>
+                    <p>Lucas es un gato tranquilo y cariñoso que está en busca de un hogar donde pueda recibir todo el
+                        amor que tiene para dar. Es muy independiente, pero cuando se siente cómodo, disfruta de largas
+                        siestas en compañía. Lucas es sociable, tanto con otros gatos como con humanos, y es perfecto
+                        para quienes buscan un amigo fiel y silencioso. Está esterilizado, vacunado y listo para
+                        mudarse.</p>
+                    <button>Adoptar</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h3>¿Listo para adoptar?</h3>
+            <p>No esperes más para cambiar la vida de una mascota. ¡Da el primer paso y contáctanos hoy mismo para saber
+                más sobre el proceso de adopción!</p>
+            <button><a href="#">Contáctanos</a></button><a href="/contactanos/contactanos.html"></a>
+
+        </section>
     </main>
 
-    <footer>
-        <!-- pie de pagina - información de contacto -->
-
+    <footer class="text-center p-4">
+        <p>&copy; 2024 Furry Paws. Todos los derechos reservados.</p>
+        <div class="social-icons mt-3">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
+
+
 </body>
 
 </html>
