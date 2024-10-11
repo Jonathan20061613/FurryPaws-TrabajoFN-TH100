@@ -1,4 +1,5 @@
 /* Estilos generales */
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
 
 :root {
     --backgroundColor: #c4c5c6;
@@ -11,6 +12,7 @@
     --textColor: #000;
     --tipography: 'Arial Narrow', sans-serif;
     font-family: Arial, sans-serif;
+    --tipography1: "Edu AU VIC WA NT Dots", cursive;
       
 }
 
@@ -243,4 +245,17 @@ footer a {
 
 footer a:hover {
     text-decoration: underline; /* Subrayado en hover */
+}
+.cta{
+    background-color: hsl(202, 63%, 30%);
+    font-family: var(--tipography1);
+    font-size: 30px;
+    margin-top: 50px;
+}
+.animales{
+    width: 20px;
+    height: 30px;
+    margin-top: 50px;
+    padding: 50%;
+
 }
