@@ -175,6 +175,7 @@
 .banner{
     border: solid greenyellow;
     background-color: #012A4A;
+    
 }
 .titulo{
     color: #c4c5c6;
@@ -188,8 +189,12 @@
     font-family: var(--fuente1);
     text-align:center;
 }
-.imagenBanner{
+.img.banner{
+    display: grid;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    height: 100vh; /* Esto ajusta la altura del contenedor */
 }
 
 
