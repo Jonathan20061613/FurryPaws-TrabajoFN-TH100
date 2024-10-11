@@ -172,8 +172,25 @@
     /* Cambia el color del enlace al pasar el mouse */
 }
 
-
-
+.banner{
+    border: solid greenyellow;
+    background-color: #012A4A;
+}
+.titulo{
+    color: #c4c5c6;
+    size: 50%;
+    font-family: var(--fuente1);
+    text-align:center;
+}
+.sobreNosotros{
+    color: #c4c5c6;
+    size: 30%;
+    font-family: var(--fuente1);
+    text-align:center;
+}
+.imagenBanner{
+    align-items: center;
+}
 
 
 
