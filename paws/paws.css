@@ -229,3 +229,18 @@
     border-radius: 10px;
 }
 
+/* -------- footer -------- */
+footer {
+    background-color:var(--color-primary);
+    color: var(--color-secundary); /* Color del texto en el pie de página */
+    padding: 20px;
+}
+
+footer a {
+    color: var(--color-secundary); /* Color de los enlaces en el pie de página */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}
