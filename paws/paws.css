@@ -11,7 +11,6 @@
     --textColor: #000;
     --tipography: 'Arial Narrow', sans-serif;
     font-family: Arial, sans-serif;
-      
 }
 
 /* Navbar */
@@ -110,7 +109,7 @@
     position: relative;
     width: auto;
     align-content: center;
-   
+
 }
 
 .banner img {
