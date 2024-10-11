@@ -1,28 +1,63 @@
-/* Estilos generales */
+/* ----------------------------------------- import styles ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
+/* ----------------------------------------- * ------------------------------------------------- */
 
+/* ----------------------------------------- GLOBAL STYLES ------------------------------------------------- */
+
+    
+
+
+/* ----------------------------------------- VARIABLES ------------------------------------------------- */
 :root {
+    /* tipografía */
+    --fuente1: "Figtree", serif;
+    --fuente2: "IBM Plex Mono", monospace;
+    /* colores */
+    --color-primary: #000000;
+    --color-secundary: #ffffff;
+    --color-1: #1a8510;
+    --color-2: #012A4A;
+    --color-3: #A3CEF1;
     --backgroundColor: #c4c5c6;
-    --colorPrimary: hsl(202, 63%, 30%);
     --colorPrimary1: #ff70a6;
     --colorPrimary2: #ffd670;
     --colorPrimary3: #8AC6DD;
     --colorPrimary4: #FF9770;
     --colorPrimary: #449b5b;
     --textColor: #000;
+    --colorbottonlogin: white;
+    
+
+
     --tipography: 'Arial Narrow', sans-serif;
     font-family: Arial, sans-serif;
     --tipography1: "Edu AU VIC WA NT Dots", cursive;
-      
+
 }
 
-/* Navbar */
+
+
+/* ----------------------------------------- HEADER ------------------------------------------------- */
+.header {
+    margin: 0;
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: 100vh;
+    /* Ajuste automático para el contenido */
+    display: flex;
+    flex-direction: column;
+    /* Contenido apilado verticalmente */
+}
 
 /* --------- barra nav -------- */
 .container-navBar {
     width: 100%;
-    height: 17%; /* Mantiene la altura */
-    padding: 0 20px; /* Padding lateral */
+    height: 17%;
+    /* Mantiene la altura */
+    padding: 0 20px;
+    /* Padding lateral */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -31,13 +66,13 @@
     font-size: large;
     padding-left: 70px;
     padding-right: 90px;
-    
 }
 
 /* -------- logo -------- */
 .logo-navBar {
     margin-right: 20px;
-    width: 10vw; /* Espacio entre el logo y la lista */
+    width: 10vw;
+    /* Espacio entre el logo y la lista */
 }
 
 .logo-navBar img {
@@ -46,73 +81,104 @@
 
 /* -------- Nav Bar -------- */
 .navBar-list {
-    width: 45vw; /* Ancho de la lista */
-    height: 5vh; /* Altura de la lista */
-    display: flex; /* Mantiene la lista en fila */
-    list-style: none; /* Elimina los puntos de la lista */
-    gap: 4vw; /* Espacio entre los elementos de la lista */
-    margin: 0; /* Elimina el margen */
-    padding: 0; /* Elimina el padding */
+    width: 45vw;
+    /* Ancho de la lista */
+    height: 5vh;
+    /* Altura de la lista */
+    display: flex;
+    /* Mantiene la lista en fila */
+    list-style: none;
+    /* Elimina los puntos de la lista */
+    gap: 4vw;
+    /* Espacio entre los elementos de la lista */
+    margin: 0;
+    /* Elimina el margen */
+    padding: 0;
+    /* Elimina el padding */
     font-weight: bold;
-    background-color: rgba(128, 128, 128, 0.315); /* Color de fondo */
-    border-radius: 50px; /* Bordes redondeados */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
-    justify-content: center; /* Centra los elementos */
-    align-items: center; /* Alinea verticalmente los elementos */
+    background-color: rgba(128, 128, 128, 0.315);
+    /* Color de fondo */
+    border-radius: 50px;
+    /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+    justify-content: center;
+    /* Centra los elementos */
+    align-items: center;
+    /* Alinea verticalmente los elementos */
 }
 
 /* Quitar subrayado de los enlaces */
 .navBar-list a {
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: var(--color-primary); /* Asegúrate de que el color sea visible */
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: var(--color-primary);
+    /* Asegúrate de que el color sea visible */
 }
 
 /* -------- button login -------- */
 .button-login {
     width: 7vw;
     height: 5vh;
-    padding: 0; /* Asegúrate de que no haya padding que afecte el centrado */
-    background-color: #449b5b;
+    padding: 0;
+    /* Asegúrate de que no haya padding que afecte el centrado */
+    background-color: var(--color-1);
     border-radius: 50px;
     font-weight: bold;
     border: solid 4px rgb(255, 255, 255);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    margin-left: 20px; /* Espacio entre el botón de login y la lista */
-    display: flex; /* Usar flexbox para centrar */
-    align-items: center; /* Centra verticalmente el contenido */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+    margin-left: 20px;
+    /* Espacio entre el botón de login y la lista */
+    display: flex;
+    /* Usar flexbox para centrar */
+    align-items: center;
+    /* Centra verticalmente el contenido */
+    justify-content: center;
+    /* Centra horizontalmente el contenido */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    /* Transición suave */
 }
 
 /* Quitar subrayado del enlace de login */
 .button-login a {
-    text-decoration: none; /* Elimina el subrayado del enlace */
-    color: var(--color-secundary); /* Asegúrate de que el color sea visible */
-    display: block; /* Ocupa todo el botón */
-    width: 100%; /* Ocupa todo el ancho del botón */
-    height: 100%; /* Ocupa todo el alto del botón */
-    line-height: 5vh; /* Asegura que el texto esté centrado verticalmente */
-    text-align: center; /* Centra el texto horizontalmente */
+    text-decoration: none;
+    /* Elimina el subrayado del enlace */
+    color: var(--color-secundary);
+    /* Asegúrate de que el color sea visible */
+    display: block;
+    /* Ocupa todo el botón */
+    width: 100%;
+    /* Ocupa todo el ancho del botón */
+    height: 100%;
+    /* Ocupa todo el alto del botón */
+    line-height: 5vh;
+    /* Asegura que el texto esté centrado verticalmente */
+    text-align: center;
+    /* Centra el texto horizontalmente */
 }
 
 /* Estilo al pasar el mouse */
 .button-login:hover {
-    background-color: var(--color-secundary); /* Color al pasar el mouse */
-    color: var(--color-primary); /* Cambia el color del texto */
-    border-color: var(--color-primary); /* Cambia el borde al pasar el mouse */
+    background-color: var(--color-secundary);
+    /* Color al pasar el mouse */
+    color: var(--color-primary);
+    /* Cambia el color del texto */
+    border-color: var(--color-primary);
+    /* Cambia el borde al pasar el mouse */
 }
 
 .button-login a:hover {
-    color: var(--color-primary); /* Cambia el color del enlace al pasar el mouse */
+    color: var(--color-primary);
+    /* Cambia el color del enlace al pasar el mouse */
 }
 
 /* Banner Section */
 .banner {
-    background-color: hsl(202, 63%, 30%);
+    background-color: #012A4A;;
     position: relative;
-    width: auto;
+    width: 100%;
     align-content: center;
-   
+
 }
 
 .banner img {
@@ -120,7 +186,8 @@
     border-radius: 50px;
     height: 50%;
     justify-content: center;
-    object-fit: cover; /* Esto asegura que la imagen cubra todo el contenedor */
+    object-fit: cover;
+    /* Esto asegura que la imagen cubra todo el contenedor */
     display: flex;
     margin: 0 auto;
 }
@@ -132,7 +199,8 @@
     transform: translate(-50%, -50%);
     text-align: center;
     color: rgb(0, 0, 0);
-    background-color: rgba(163, 155, 155, 0.382); /* Fondo oscuro semitransparente para el texto */
+    background-color: rgba(163, 155, 155, 0.382);
+    /* Fondo oscuro semitransparente para el texto */
     padding: 1rem;
     border-radius: 10px;
 }
@@ -144,14 +212,14 @@
 .banner-text p {
     font-size: 1.2rem;
     color: rgb(0, 0, 0);
-    
+
 }
 
 /* main */
 /* Main Content */
 .main-content {
     padding: 2rem;
-    background-color:  #ffffff;
+    background-color: #ffffff;
 }
 
 .intro {
@@ -161,13 +229,14 @@
 }
 
 .intro h2 {
-    font-size: 2rem;
-    color: #333;
+    font-size: 3rem;
+    color: black;
+    text-shadow: #012A4A;
 }
 
 .intro p {
     font-size: 1.1rem;
-    color: #555;
+    color: black;
     max-width: 700px;
     margin: 0 auto;
 }
@@ -176,14 +245,29 @@
     text-align: center;
     margin: 20px;
     margin-bottom: 3rem;
-    background-color: hsl(202, 63%, 30%);;
+    background-color: #012A4A;
+    
+
 }
+.titulo{
+    font-family: var(--tipography1);
+    font-size: 50px;
+    background-color:var(--color-2);
+    border-style:hidden;
+    color:#c4c5c6
+}
+    
+
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
-    gap: 20px; /* Espacio entre las tarjetas */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 columnas */
+    gap: 20px;
+    /* Espacio entre las tarjetas */
     padding-bottom: 5%;
+    padding: auto;
+    
 }
 
 .pet-card {
@@ -224,6 +308,7 @@
 .pet-card button:hover {
     background-color: #218838;
 }
+
 .cta {
     text-align: center;
     background-color: #eaeaea;
@@ -232,10 +317,52 @@
 }
 
 /* -------- footer -------- */
+ .text{
+    background-color: var(--color-primary);
+    color: var(--color-secundary);
+    /* Color del texto en el pie de página */
+    padding: 20px;
+}
+
+.text{
+    color: var(--color-secundary);
+    /* Color de los enlaces en el pie de página */
+    text-decoration: none;
+    /* Sin subrayado */
+}
+
+.text:hover {
+    text-decoration: underline;
+    /* Subrayado en hover */
+}
+
+.cta {
+    background-color: hsl(197, 14%, 90%);
+    font-family: var(--tipography1);
+    font-size: 30px;
+}
+
+.button{
+
+    background-color: #A3CEF1;
+    border-radius: 10px;
+    border: solid var(--color-2);
+    font-family: var(--fuente2);
+    font-size: medium;
+    text-decoration: none;
+
+}
+.animales {
+    width: 20px;
+    height: 30px;
+    margin-top: 50px;
+    padding: 50%;
+}
 footer {
-    background-color:var(--color-primary);
+    background-color: var(--color-2);
     color: var(--color-secundary); /* Color del texto en el pie de página */
     padding: 20px;
+    align-items: center;
 }
 
 footer a {
@@ -246,16 +373,9 @@ footer a {
 footer a:hover {
     text-decoration: underline; /* Subrayado en hover */
 }
-.cta{
-    background-color: hsl(202, 63%, 30%);
-    font-family: var(--tipography1);
-    font-size: 30px;
-    margin-top: 50px;
-}
-.animales{
-    width: 20px;
-    height: 30px;
-    margin-top: 50px;
-    padding: 50%;
+.text-center{
+    align-content: center;
 
 }
+
+
