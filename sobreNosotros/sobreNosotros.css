@@ -156,7 +156,10 @@
     font-size: large;
     text-align:center;
 }
-
+.historiaferryTails{
+    justify-content: center ;
+    border:solid red;
+}
 
 /* -------------------------------------------- footer ---------------------------------------------- */
 footer {
