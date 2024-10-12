@@ -43,7 +43,7 @@
 /* --------- barra nav -------- */
 .container-navBar {
     width: 100%;
-    height: 17%; /* Mantiene la altura */
+    height: 20%; /* Mantiene la altura */
     padding: 0 20px; /* Padding lateral */
     display: flex;
     align-items: center;
