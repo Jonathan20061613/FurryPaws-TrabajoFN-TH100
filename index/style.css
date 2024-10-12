@@ -103,7 +103,6 @@
     color: var(--color-secundary); /* Asegúrate de que el color sea visible */
     display: block; /* Ocupa todo el botón */
     width: 100%; /* Ocupa todo el ancho del botón */
-    height: 100%; /* Ocupa todo el alto del botón */
     line-height: 5vh; /* Asegura que el texto esté centrado verticalmente */
     text-align: center; /* Centra el texto horizontalmente */
 }
