@@ -42,22 +42,16 @@
 /* ----------------------------------------- HEADER ------------------------------------------------- */
 .header {
     margin: 0;
-    width: 100%;
-    /* Ocupa todo el ancho */
-    height: 100vh;
-    /* Ajuste automático para el contenido */
+    width: 100%; /* Ocupa todo el ancho */
     display: flex;
-    flex-direction: column;
-    /* Contenido apilado verticalmente */
+    flex-direction: column; /* Contenido apilado verticalmente */
 }
 
 /* --------- barra nav -------- */
 .container-navBar {
     width: 100%;
-    height: 17%;
-    /* Mantiene la altura */
-    padding: 0 20px;
-    /* Padding lateral */
+    height: 17%; /* Mantiene la altura */
+    padding: 0 20px; /* Padding lateral */
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -71,8 +65,7 @@
 /* -------- logo -------- */
 .logo-navBar {
     margin-right: 20px;
-    width: 10vw;
-    /* Espacio entre el logo y la lista */
+    width: 10vw; /* Espacio entre el logo y la lista */
 }
 
 .logo-navBar img {
@@ -81,98 +74,68 @@
 
 /* -------- Nav Bar -------- */
 .navBar-list {
-    width: 45vw;
-    /* Ancho de la lista */
-    height: 5vh;
-    /* Altura de la lista */
-    display: flex;
-    /* Mantiene la lista en fila */
-    list-style: none;
-    /* Elimina los puntos de la lista */
-    gap: 4vw;
-    /* Espacio entre los elementos de la lista */
-    margin: 0;
-    /* Elimina el margen */
-    padding: 0;
-    /* Elimina el padding */
+    width: 45vw; /* Ancho de la lista */
+    height: 5vh; /* Altura de la lista */
+    display: flex; /* Mantiene la lista en fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    gap: 4vw; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
     font-weight: bold;
-    background-color: rgba(128, 128, 128, 0.315);
-    /* Color de fondo */
-    border-radius: 50px;
-    /* Bordes redondeados */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    /* Sombra */
-    justify-content: center;
-    /* Centra los elementos */
-    align-items: center;
-    /* Alinea verticalmente los elementos */
+    background-color: rgba(128, 128, 128, 0.315); /* Color de fondo */
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
 }
 
 /* Quitar subrayado de los enlaces */
 .navBar-list a {
-    text-decoration: none;
-    /* Elimina el subrayado de los enlaces */
-    color: var(--color-primary);
-    /* Asegúrate de que el color sea visible */
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--color-primary); /* Asegúrate de que el color sea visible */
 }
 
 /* -------- button login -------- */
 .button-login {
     width: 7vw;
     height: 5vh;
-    padding: 0;
-    /* Asegúrate de que no haya padding que afecte el centrado */
+    padding: 0; /* Asegúrate de que no haya padding que afecte el centrado */
     background-color: var(--color-1);
     border-radius: 50px;
     font-weight: bold;
     border: solid 4px rgb(255, 255, 255);
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    margin-left: 20px;
-    /* Espacio entre el botón de login y la lista */
-    display: flex;
-    /* Usar flexbox para centrar */
-    align-items: center;
-    /* Centra verticalmente el contenido */
-    justify-content: center;
-    /* Centra horizontalmente el contenido */
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    /* Transición suave */
+    margin-left: 20px; /* Espacio entre el botón de login y la lista */
+    display: flex; /* Usar flexbox para centrar */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto horizontalmente */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
 }
 
 /* Quitar subrayado del enlace de login */
 .button-login a {
-    text-decoration: none;
-    /* Elimina el subrayado del enlace */
-    color: var(--color-secundary);
-    /* Asegúrate de que el color sea visible */
-    display: block;
-    /* Ocupa todo el botón */
-    width: 100%;
-    /* Ocupa todo el ancho del botón */
-    height: 100%;
-    /* Ocupa todo el alto del botón */
-    line-height: 5vh;
-    /* Asegura que el texto esté centrado verticalmente */
-    text-align: center;
-    /* Centra el texto horizontalmente */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: var(--color-secundary); /* Asegúrate de que el color sea visible */
+    display: block; /* Ocupa todo el botón */
+    width: 100%; /* Ocupa todo el ancho del botón */
+    line-height: 5vh; /* Asegura que el texto esté centrado verticalmente */
+    
 }
 
 /* Estilo al pasar el mouse */
 .button-login:hover {
-    background-color: var(--color-secundary);
-    /* Color al pasar el mouse */
-    color: var(--color-primary);
-    /* Cambia el color del texto */
-    border-color: var(--color-primary);
-    /* Cambia el borde al pasar el mouse */
+    background-color: var(--color-secundary); /* Color al pasar el mouse */
+    color: var(--color-primary); /* Cambia el color del texto */
+    border-color: var(--color-primary); /* Cambia el borde al pasar el mouse */
 }
 
 .button-login a:hover {
-    color: var(--color-primary);
-    /* Cambia el color del enlace al pasar el mouse */
+    color: var(--color-primary); /* Cambia el color del enlace al pasar el mouse */
 }
 
-/* Banner Section */
+
+/* ---------------------------------------------- Banner Section ---------------------------------------------- */
 .banner {
     background-color: #012A4A;;
     position: relative;
