@@ -1,0 +1,315 @@
+/* ----------------------------------------- import styles ------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* ----------------------------------------- * ------------------------------------------------- */
+
+/* ----------------------------------------- GLOBAL STYLES ------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------- VARIABLES ------------------------------------------------- */
+:root {
+    /* tipografía */
+    --fuente1: "Figtree", serif;
+    --fuente2: "IBM Plex Mono", monospace;
+    /* colores */
+    --color-primary: #000000;
+    --color-secundary: #ffffff;
+    --color-1: #1a8510;
+    --color-2: #012A4A;
+    --color-3: #A3CEF1;
+    --color-4: #FFD235;
+}
+
+/* ----------------------------------------- HEADER ------------------------------------------------- */
+.header {
+    margin: 0;
+    width: 100%; 
+    display: flex;
+    flex-direction: column; /* Contenido apilado verticalmente */
+}
+
+/* --------- barra nav -------- */
+.container-navBar {
+    width: 100%;
+    height: 17%; /* Mantiene la altura */
+    padding: 0 20px; /* Padding lateral */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 5vw;
+    font-family: var(--fuente1);
+    font-size: large;
+    padding-left: 70px;
+    padding-right: 90px;
+}
+
+/* -------- logo -------- */
+.logo-navBar {
+    margin-right: 20px;
+    width: 10vw; /* Espacio entre el logo y la lista */
+}
+
+.logo-navBar img {
+    width: 15vw;
+}
+
+/* -------- Nav Bar -------- */
+.navBar-list {
+    width: 45vw; /* Ancho de la lista */
+    height: 5vh; /* Altura de la lista */
+    display: flex; /* Mantiene la lista en fila */
+    list-style: none; /* Elimina los puntos de la lista */
+    gap: 4vw; /* Espacio entre los elementos de la lista */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
+    font-weight: bold;
+    background-color: rgba(128, 128, 128, 0.315); /* Color de fondo */
+    border-radius: 50px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
+}
+
+/* Quitar subrayado de los enlaces */
+.navBar-list a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: var(--color-primary); /* Asegúrate de que el color sea visible */
+}
+
+/* -------- button login -------- */
+.button-login {
+    width: 7vw;
+    height: 5vh;
+    padding: 0; /* Asegúrate de que no haya padding que afecte el centrado */
+    background-color: var(--color-1);
+    border-radius: 50px;
+    font-weight: bold;
+    border: solid 4px rgb(255, 255, 255);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    margin-left: 20px; /* Espacio entre el botón de login y la lista */
+    display: flex; /* Usar flexbox para centrar */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+}
+
+/* Quitar subrayado del enlace de login */
+.button-login a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: var(--color-secundary); /* Asegúrate de que el color sea visible */
+    display: block; /* Ocupa todo el botón */
+    width: 100%; /* Ocupa todo el ancho del botón */
+    text-align: center; /* Centra el texto horizontalmente */
+}
+
+/* Estilo al pasar el mouse */
+.button-login:hover {
+    background-color: var(--color-secundary); /* Color al pasar el mouse */
+    color: var(--color-primary); /* Cambia el color del texto */
+    border-color: var(--color-primary); /* Cambia el borde al pasar el mouse */
+}
+
+.button-login a:hover {
+    color: var(--color-primary); /* Cambia el color del enlace al pasar el mouse */
+}
+
+/* ------------------------------------ banner ------------------------------------------------*/
+
+.container-baner {
+    height: 86vh;
+    width: 100%;
+    background-image: url('/contactanos/assetsContactanos/imgbaner.avif');
+    background-size: cover; 
+}
+
+.content-baner {
+    height: 100%;
+    background-color: #0000006e;
+    color: #ffffff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.subtittle-baner {
+    font-size: large;
+    color: white;
+}
+
+.container-mainBaner {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #000000b6;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: var(--fuente2);
+}
+
+.container-mainBaner cite {
+    font-family: var(--fuente1);
+}
+
+/* --------- botones ------------ */
+.container-button {
+    display: flex; /* Organiza los botones horizontalmente */
+    justify-content: center; /* Centra los botones */
+    margin: 50px auto;
+}
+
+.container-button ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Hace que los botones estén en línea */
+    gap: 20px; /* Añade un espacio entre los botones */
+}
+
+.container-button li {
+    display: inline-block;
+}
+
+/* Botones Generales */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 50px;
+    text-align: center;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    font-weight: bold;
+    color: rgb(231, 222, 222); /* Cambia el color del texto a negro */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.5s ease, transform 0.5s ease; /* Transición suave */
+}
+
+/* Botón Primario */
+.btn-primary {
+    background-color: var(--color-2);
+    border: solid 5px rgb(255, 255, 255);
+    color: var(--color-secundary);
+}
+
+/* Botón Secundario */
+.btn-secondary {
+    background-color: var(--color-3);
+    border: solid 5px var(--color-2);
+    color: var(--color-2);
+}
+
+/* Efecto al pasar el mouse */
+.btn:hover {
+    background-color: var(--color-4); /* Cambia el color de fondo al pasar el mouse */
+    border: solid 5px rgb(226, 222, 222); /* Cambia el borde */
+    transform: scale(1); /* Le da un ligero zoom al pasar el mouse */
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+
+
+/* -------------------------------- main ------------------------------------------------*/
+.main {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 20px auto; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+    font-family: Arial, sans-serif; /* Tipografía */
+    background-color: #dddada4f; /* Color de fondo */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Estilos para el encabezado */
+h2 {
+    color: #333; /* Color del texto */
+    text-align: center; /* Centra el título */
+}
+
+/* Estilos para el formulario */
+form {
+    display: flex; /* Usar flexbox para el formulario */
+    flex-direction: column; /* Organizar elementos en columna */
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+label {
+    margin: 10px 0 5px; /* Espaciado para las etiquetas */
+    font-weight: bold; /* Negrita */
+}
+
+input,
+textarea {
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ccc; /* Borde */
+    border-radius: 4px; /* Bordes redondeados */
+    resize: vertical; /* Permitir solo cambiar el tamaño vertical en textarea */
+}
+
+input:focus,
+textarea:focus {
+    border-color: #66afe9; /* Color del borde al enfocar */
+    outline: none; /* Quitar el contorno predeterminado */
+}
+
+/* Estilo para el botón */
+button {
+    background-color: #5cb85c; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+button:hover {
+    background-color: #4cae4c; /* Color al pasar el mouse */
+}
+
+/* Estilos para secciones de información */
+h3 {
+    color: #555; /* Color del texto */
+    margin-top: 20px; /* Espaciado superior */
+}
+
+/* Estilos para enlaces */
+a {
+    color: #007bff; /* Color de los enlaces */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    text-decoration: underline; /* Subrayado al pasar el mouse */
+}
+
+/* Estilo para el iframe */
+iframe {
+    width: 100%; /* Ancho completo */
+    height: 450px; /* Altura fija */
+    border: 0; /* Sin borde */
+    margin-top: 10px; /* Espaciado superior */
+}
+
+/* Estilo para los párrafos */
+p {
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin: 10px 0; /* Espaciado superior e inferior */
+}
+
+
+/* -------- footer -------- */
+footer {
+    background-color: var(--color-2);
+    color: var(--color-secundary); /* Color del texto en el pie de página */
+    padding: 20px;
+}
+
+footer a {
+    color: var(--color-secundary); /* Color de los enlaces en el pie de página */
+    text-decoration: none; /* Sin subrayado */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Subrayado en hover */
+}

@@ -12,13 +12,18 @@
 /* ----------------------------------------- VARIABLES ------------------------------------------------- */
 :root {
     /* tipografía */
+    /* tipografía */
     --fuente1: "Figtree", serif;
+    --fuente2: "IBM Plex Mono", monospace;
+    /* colores */
     --fuente2: "IBM Plex Mono", monospace;
     /* colores */
     --color-primary: #000000;
     --color-secundary: #ffffff;
     --color-1: #1a8510;
     --color-2: #012A4A;
+    --color-3: #A3CEF1;
+    --color-4: #FFD235;
     --color-3: #A3CEF1;
     --color-4: #FFD235;
 }
@@ -28,7 +33,10 @@
     margin: 0;
     width: 100%; /* Ocupa todo el ancho */
     height: 100vh; /* Ajuste automático para el contenido */
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ajuste automático para el contenido */
     display: flex;
+    flex-direction: column; /* Contenido apilado verticalmente */
     flex-direction: column; /* Contenido apilado verticalmente */
 }
 
@@ -40,6 +48,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    justify-content: space-around;
     gap: 5vw;
     font-family: var(--fuente1);
     font-size: large;
@@ -49,6 +58,12 @@
 
 /* -------- logo -------- */
 .logo-navBar {
+    margin-right: 20px;
+    width: 10vw; /* Espacio entre el logo y la lista */
+}
+
+.logo-navBar img {
+    width: 15vw;
     margin-right: 20px;
     width: 10vw; /* Espacio entre el logo y la lista */
 }
@@ -66,10 +81,14 @@
     gap: 4vw; /* Espacio entre los elementos de la lista */
     margin: 0; /* Elimina el margen */
     padding: 0; /* Elimina el padding */
+    margin: 0; /* Elimina el margen */
+    padding: 0; /* Elimina el padding */
     font-weight: bold;
     background-color: rgba(128, 128, 128, 0.315); /* Color de fondo */
     border-radius: 50px; /* Bordes redondeados */
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra */
+    justify-content: center; /* Centra los elementos */
+    align-items: center; /* Alinea verticalmente los elementos */
     justify-content: center; /* Centra los elementos */
     align-items: center; /* Alinea verticalmente los elementos */
 }
@@ -85,6 +104,7 @@
     width: 7vw;
     height: 5vh;
     padding: 0; /* Asegúrate de que no haya padding que afecte el centrado */
+    padding: 0; /* Asegúrate de que no haya padding que afecte el centrado */
     background-color: var(--color-1);
     border-radius: 50px;
     font-weight: bold;
@@ -95,10 +115,15 @@
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
+    display: flex; /* Usar flexbox para centrar */
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease; /* Transición suave */
 }
 
 /* Quitar subrayado del enlace de login */
 .button-login a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
     text-decoration: none; /* Elimina el subrayado del enlace */
     color: var(--color-secundary); /* Asegúrate de que el color sea visible */
     display: block; /* Ocupa todo el botón */
