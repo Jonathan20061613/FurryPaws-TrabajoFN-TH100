@@ -153,101 +153,48 @@
 
 
 /* ---------------------------------------------------------------- MAIN ----------------------------------------------------------------*/
-
 /* Contenedor principal */
-.container {
-    border: none; /* Eliminar el borde */
+#form-wrapper {
     display: flex;
-    margin: 40px auto; /* Centra el contenedor en la página */
-    width: 90%; /* Ajusta el ancho total del contenedor */
-    max-width: 1200px; /* Ancho máximo para evitar que se extienda demasiado */
-    border-radius: 10px; /* Esquinas redondeadas */
-    overflow: hidden; /* Esconde contenido que sobresale */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra alrededor del contenedor */
-}
-
-/* Estilo del contenedor de imagen */
-.image-container {
-    width: 25vw; /* Cambia a un 25% del ancho de la ventana */
-    flex: 1;
-    background-image: url('/login/assetsLogin/11.jpg'); /* Cambiar por la ruta de la imagen */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    border-top-left-radius: 10px; /* Borde redondeado en la esquina superior izquierda */
-    border-bottom-left-radius: 10px; /* Borde redondeado en la esquina inferior izquierda */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Sombra más sutil para el contenedor de imagen */
-}
-
-/* Estilo de la superposición */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100vh;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro con mayor opacidad */
-    display: flex;
-    flex-direction: column; /* Cambio a columna */
-    justify-content: center; /* Centra el contenido verticalmente */
-    align-items: center; /* Centra el contenido horizontalmente */
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para resaltar el texto */
-    font-family: 'Arial', sans-serif; /* Fuente más moderna */
-}
-
-/* Estilo del botón "Regístrate" */
-.register-button {
-    background-color: #1a8510; /* Color de fondo */
-    color: white;
-    padding: 10px 20px; /* Espaciado interno */
-    border: none;
-    border-radius: 8px; /* Esquinas redondeadas */
-    cursor: pointer;
-    margin-top: 20px; /* Espacio arriba del botón */
-    transition: background-color 0.3s; /* Transición suave para el fondo */
-}
-
-.register-button:hover {
-    background-color: #155d08; /* Color más oscuro al pasar el mouse */
-}
-
-.additional-content {
-    margin-top: 20px; /* Espacio entre el texto */
+    background-color: #f5f5f5;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 /* Contenedor del formulario */
 .form-container {
-    flex: 1;
+    width: 90%;
+    max-width: 600px;
     padding: 40px;
-    background-color: rgba(255, 255, 255, 0.95); /* Fondo blanco con más opacidad */
-    border-radius: 10px; /* Esquinas redondeadas */
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: auto; /* Centra el formulario horizontalmente */
-    border-top-right-radius: 10px; /* Borde redondeado en la esquina superior derecha */
-    border-bottom-right-radius: 10px; /* Borde redondeado en la esquina inferior derecha */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    gap: 20px;
 }
 
 /* Estilo del título */
-h1 {
-    margin-bottom: 20px;
-    color: #1a8510; /* Color primario */
-    font-family: 'Roboto', sans-serif; /* Cambia la fuente del título */
-    text-align: center; /* Centra el texto */
+.titulo-inicioSesion {
+    margin: 0;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
 }
 
-/* Estilo de la foto de perfil */
+/* Foto de perfil */
 .profile-pic {
     width: 100px;
     height: 100px;
     border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 20px;
-    border: 2px solid #1a8510; /* Borde alrededor de la foto de perfil */
 }
 
 .profile-pic img {
@@ -256,121 +203,88 @@ h1 {
     object-fit: cover;
 }
 
-/* Estilo de los inputs */
+/* Inputs */
 input {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
-    border: 1px solid #ddd; /* Cambia el color del borde */
-    border-radius: 8px; /* Esquinas redondeadas más pronunciadas */
-    transition: border-color 0.3s; /* Transición suave para el borde */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s;
 }
 
 input:focus {
-    border-color: #1a8510; /* Color del borde al hacer foco */
-    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #000000;
+    outline: none;
 }
 
-/* Estilo de los enlaces */
+/* Enlaces */
 .links {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 20px;
 }
 
 .links a {
-    color: #1a8510;
+    color: #000;
     text-decoration: none;
-    transition: color 0.3s; /* Transición suave para el color */
+    transition: color 0.3s;
 }
 
 .links a:hover {
-    color: #155d08; /* Color más oscuro al pasar el mouse */
+    color: #35ff11;
 }
 
-/* Estilo del botón */
+/* Botón de inicio de sesión */
 button {
     background-color: #1a8510;
     color: white;
     padding: 12px;
-    border: none;
-    border-radius: 8px; /* Esquinas redondeadas más pronunciadas */
+    border: solid 5px white;
+    border-radius: 50px;
     cursor: pointer;
-    width: 100%;
-    margin-bottom: 20px;
-    transition: background-color 0.3s; /* Transición suave para el fondo */
-    font-size: 16px; /* Aumenta el tamaño de la fuente */
+    width: 50%;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    transition: background-color 0.3s;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; /* Centra horizontalmente el botón */
 }
 
 button:hover {
-    background-color: #155d08; /* Color más oscuro al pasar el mouse */
+    background-color: #155d08;
 }
 
-/* Estilo del enlace para registrarse */
+/* Enlace de registro */
 .register-link {
-    margin-top: 10px;
-    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-size: 14px;
+    text-align: center;
 }
 
-/* Estilo del contenedor de inicio de sesión social */
+/* Social login */
 .social-login {
     text-align: center;
-    margin-top: 20px; /* Espacio arriba de la sección social */
+    width: 100%;
 }
 
-/* Botones de redes sociales */
 .social-buttons {
-    display: flex; /* Para alinear botones uno al lado del otro */
-    justify-content: center;
-    gap: 10px; /* Espacio entre los botones */
-}
-
-/* Estilo para los botones de redes sociales */
-.btn-google, .btn-facebook {
-    background-color: transparent; /* Fondo transparente */
-    color: transparent; /* Texto oculto */
-    border: none;
-    cursor: pointer;
-    padding: 0; /* Elimina padding para el logo */
     display: flex;
-    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: center;
+    gap: 10px;
 }
 
-/* Estilo para los iconos de redes sociales */
 .social-icon {
-    width: 40px; /* Ajusta el tamaño del logo */
-    height: 40px; /* Ajusta el tamaño del logo */
-    transition: transform 0.3s; /* Transición suave para el hover */
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s;
 }
 
 .btn-google:hover .social-icon,
 .btn-facebook:hover .social-icon {
-    transform: scale(1.1); /* Escala el logo al pasar el mouse */
-}
-
-/* Estilo de separación */
-.separator {
-    margin: 20px 0; /* Margen superior e inferior */
-    width: 100%; /* Ancho completo */
-    text-align: center; /* Centra el texto */
-}
-
-/* Línea de separación */
-.separator::before,
-.separator::after {
-    content: "";
-    flex: 1; /* Llenar el espacio disponible */
-    border-top: 1px solid #ddd; /* Línea gris */
-    align-self: center; /* Centra la línea */
-}
-
-.separator::before {
-    margin-right: 10px; /* Espacio a la izquierda de la línea */
-}
-
-.separator::after {
-    margin-left: 10px; /* Espacio a la derecha de la línea */
+    transform: scale(1.1);
 }
 /* ---------------------------------------------------------------- footer ---------------------------------------------------------------- */
 
