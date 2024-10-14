@@ -23,10 +23,31 @@
     --color-4: #FFD235;
 }
 
+/* ----------------------------------------- GLOBAL STYLES ------------------------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------- VARIABLES ------------------------------------------------- */
+:root {
+    /* tipografía */
+    --fuente1: "Figtree", serif;
+    --fuente2: "IBM Plex Mono", monospace;
+    /* colores */
+    --color-primary: #000000;
+    --color-secundary: #ffffff;
+    --color-1: #1a8510;
+    --color-2: #012A4A;
+    --color-3: #A3CEF1;
+    --color-4: #FFD235;
+}
+
 /* ----------------------------------------- HEADER ------------------------------------------------- */
 .header {
     margin: 0;
-    width: 100%; 
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ajuste automático para el contenido */
     display: flex;
     flex-direction: column; /* Contenido apilado verticalmente */
 }
@@ -102,6 +123,7 @@
     color: var(--color-secundary); /* Asegúrate de que el color sea visible */
     display: block; /* Ocupa todo el botón */
     width: 100%; /* Ocupa todo el ancho del botón */
+    line-height: 5vh; /* Asegura que el texto esté centrado verticalmente */
     text-align: center; /* Centra el texto horizontalmente */
 }
 
@@ -113,30 +135,40 @@
 }
 
 .button-login a:hover {
+    text-decoration: none; /* Elimina el subrayado del enlace */
     color: var(--color-primary); /* Cambia el color del enlace al pasar el mouse */
 }
 
-/* ------------------------------------ banner ------------------------------------------------*/
+
+/* ----------------------------------- BANNER ----------------------------------- */
 
 .container-baner {
-    height: 86vh;
+    height: 83%;
     width: 100%;
-    background-image: url('/contactanos/assetsContactanos/imgbaner.avif');
+    background-image: url('/contactanos/assetsContactanos/banerimg.jpg');
     background-size: cover; 
 }
 
 .content-baner {
     height: 100%;
     background-color: #0000006e;
-    color: #ffffff;
+    color: #ffffff; /* Texto en blanco */
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+.title-baner{
+    font-size: 80px;
+}
+
 .subtittle-baner {
-    font-size: large;
+    font-size: 30px;
+    color: white;
+}
+
+.text-banner{
     color: white;
 }
 
@@ -154,63 +186,54 @@
     font-family: var(--fuente1);
 }
 
-/* --------- botones ------------ */
-.container-button {
-    display: flex; /* Organiza los botones horizontalmente */
-    justify-content: center; /* Centra los botones */
-    margin: 50px auto;
-}
-
+/* Estilos para los botones */
 .container-button ul {
-    list-style: none;
-    padding: 0;
-    display: flex; /* Hace que los botones estén en línea */
-    gap: 20px; /* Añade un espacio entre los botones */
+    list-style-type: none; /* Eliminar puntos de la lista */
+    padding: 0; /* Sin relleno */
 }
 
 .container-button li {
-    display: inline-block;
+    display: inline-block; /* Mostrar los botones en línea */
+    margin: 10px; /* Espaciado entre botones */
 }
 
-/* Botones Generales */
 .btn {
     display: inline-block;
     padding: 10px 20px;
+    margin-top: 3vh;
+    color: #ffffff; /* Texto en blanco */
+    text-decoration: none; /* Sin subrayado */
     border-radius: 50px;
-    text-align: center;
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    font-weight: bold;
-    color: rgb(231, 222, 222); /* Cambia el color del texto a negro */
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-    transition: background-color 0.5s ease, transform 0.5s ease; /* Transición suave */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave para el fondo y el color */
 }
 
-/* Botón Primario */
+/* Estilos para el botón primario */
 .btn-primary {
     background-color: var(--color-2);
-    border: solid 5px rgb(255, 255, 255);
-    color: var(--color-secundary);
+    border: solid 5px white; /* Borde blanco */
 }
 
-/* Botón Secundario */
-.btn-secondary {
-    background-color: var(--color-3);
+.btn-primary:hover {
+    background-color: var(--color-3); /* Color de fondo al pasar el mouse */
     border: solid 5px var(--color-2);
-    color: var(--color-2);
+    color: var(--color-2); /* Cambia el color de la letra al pasar el mouse */
+    text-decoration: none; /* Asegurarse de que no haya subrayado al hacer hover */
 }
 
-/* Efecto al pasar el mouse */
-.btn:hover {
-    background-color: var(--color-4); /* Cambia el color de fondo al pasar el mouse */
-    border: solid 5px rgb(226, 222, 222); /* Cambia el borde */
-    transform: scale(1); /* Le da un ligero zoom al pasar el mouse */
-    border-radius: 10px;
-    text-decoration: none;
+/* Estilos para el botón secundario */
+.btn-secondary {
+    background-color: #28a745; /* Color de fondo del botón */
+}
+
+.btn-secondary:hover {
+    background-color: #218838; /* Color de fondo al pasar el mouse */
+    color: #f8f9fa; /* Cambia el color de la letra al pasar el mouse */
+    text-decoration: none; /* Asegurarse de que no haya subrayado al hacer hover */
 }
 
 
-
-/* -------------------------------- main ------------------------------------------------*/
+/* -------------------------------- MAIN ------------------------------------------------*/
 .main {
     max-width: 1200px; /* Ancho máximo del contenido */
     margin: 20px auto; /* Centra el contenido */
@@ -219,12 +242,30 @@
     background-color: #dddada4f; /* Color de fondo */
     border-radius: 8px; /* Bordes redondeados */
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    position: relative; /* Para el efecto de fondo */
+    overflow: hidden; /* Ocultar elementos desbordados */
+}
+
+/* Añadir un borde en la parte superior */
+.main::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 10px; /* Altura del borde superior */
+    background-color: var(--color-1); /* Color del borde superior */
+    border-radius: 8px 8px 0 0; /* Bordes redondeados */
 }
 
 /* Estilos para el encabezado */
 h2 {
-    color: #333; /* Color del texto */
+    color: #000000; /* Color del texto */
     text-align: center; /* Centra el título */
+    margin-bottom: 15px; /* Espaciado inferior */
+    font-size: 2rem; /* Tamaño de fuente más grande */
+    text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 1px; /* Espaciado entre letras */
 }
 
 /* Estilos para el formulario */
@@ -232,6 +273,10 @@ form {
     display: flex; /* Usar flexbox para el formulario */
     flex-direction: column; /* Organizar elementos en columna */
     margin-bottom: 20px; /* Espaciado inferior */
+    background-color: rgba(255, 255, 255, 0.9); /* Fondo blanco translúcido */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Sombra */
 }
 
 label {
@@ -245,6 +290,7 @@ textarea {
     border: 1px solid #ccc; /* Borde */
     border-radius: 4px; /* Bordes redondeados */
     resize: vertical; /* Permitir solo cambiar el tamaño vertical en textarea */
+    transition: border-color 0.3s ease; /* Transición suave para el borde */
 }
 
 input:focus,
@@ -255,22 +301,31 @@ textarea:focus {
 
 /* Estilo para el botón */
 button {
-    background-color: #5cb85c; /* Color de fondo */
-    color: white; /* Color del texto */
-    border: none; /* Sin borde */
-    border-radius: 4px; /* Bordes redondeados */
-    padding: 10px; /* Espaciado interno */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 3vh;
+    background-color: var(--color-1);
+    color: #ffffff; /* Texto en blanco */
+    text-decoration: none; /* Sin subrayado */
+    border: solid 5px white;
+    border-radius: 50px;
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease; /* Añadido box-shadow a la transición */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra inicial */
 }
 
 button:hover {
-    background-color: #4cae4c; /* Color al pasar el mouse */
+    background-color: var(--color-2); /* Color al pasar el mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Estilos para secciones de información */
 h3 {
-    color: #555; /* Color del texto */
+    color: #000000; /* Color del texto */
     margin-top: 20px; /* Espaciado superior */
+    font-size: 1.5rem; /* Tamaño de fuente más grande */
+    border-bottom: 2px solid var(--color-1); /* Subrayado con color del tema */
+    padding-bottom: 5px; /* Espaciado inferior */
 }
 
 /* Estilos para enlaces */
@@ -289,24 +344,27 @@ iframe {
     height: 450px; /* Altura fija */
     border: 0; /* Sin borde */
     margin-top: 10px; /* Espaciado superior */
+    border-radius: 8px; /* Bordes redondeados para el iframe */
 }
 
 /* Estilo para los párrafos */
 p {
     line-height: 1.6; /* Espaciado entre líneas */
     margin: 10px 0; /* Espaciado superior e inferior */
+    font-size: 1rem; /* Tamaño de fuente */
+    color: #333; /* Color del texto */
 }
 
 
 /* -------- footer -------- */
-footer {
+footer, .text-footer {
     background-color: var(--color-2);
-    color: var(--color-secundary); /* Color del texto en el pie de página */
+    color: #ffffff; /* Cambiar el color del texto a blanco */
     padding: 20px;
 }
 
 footer a {
-    color: var(--color-secundary); /* Color de los enlaces en el pie de página */
+    color: #ffffff; /* Cambiar el color de los enlaces a blanco */
     text-decoration: none; /* Sin subrayado */
 }
 

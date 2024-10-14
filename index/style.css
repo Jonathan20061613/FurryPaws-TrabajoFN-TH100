@@ -147,7 +147,7 @@
 .container-baner {
     height: 83%;
     width: 100%;
-    background-image: url('/index/assetsIndex/imgbanner3.avif');
+    background-image: url('/index/assetsIndex/imBanner/imgbanner3.avif');
     background-size: cover; 
 }
 
@@ -159,6 +159,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.title-baner{
+    font-size: 80px;
 }
 
 .subtittle-baner {
