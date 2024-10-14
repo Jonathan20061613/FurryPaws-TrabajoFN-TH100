@@ -147,7 +147,7 @@
 .container-baner {
     height: 83%;
     width: 100%;
-    background-image: url('/index/assetsIndex/imBanner/imgbanner3.avif');
+    background-image: url('/index/assetsIndex/bannerIndex.avif');
     background-size: cover; 
 }
 
@@ -242,9 +242,6 @@
     padding: 0 15px; /* Agregar padding a los lados */
 }
 
-/* -------- service cards -------- */
-
-
 
 /* -------- adoption cards -------- */
 .img-animalesAdopcion{
@@ -335,8 +332,8 @@
 }
 
 .testimonial-card img{
-    width: 350px;
-    height: 250px;
+    width: 310px;
+    height: 270px;
 }
 
 /* -------- consejos -------- */
