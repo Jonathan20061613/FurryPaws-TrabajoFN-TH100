@@ -136,6 +136,10 @@
     justify-content: center;
 }
 
+.title-baner{
+    font-size: 80px;
+}
+
 .subtittle-baner {
     font-size: large;
 }
