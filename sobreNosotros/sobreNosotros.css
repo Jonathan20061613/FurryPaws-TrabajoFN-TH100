@@ -149,17 +149,117 @@
     margin-bottom: 40px;
 }
 
-.sobreNosotros{
-    color: #ffffff;
-    size: 30%;
-    font-family: var(--fuente1);
-    font-size: large;
-    text-align:center;
+.founders-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+   
 }
-.historiaferryTails{
-    justify-content: center ;
-    border:solid red;
+
+.founder-card {
+    background-color:var(--backgroundColor);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    width: 40%;
+   
+    
 }
+
+.founder-card:hover {
+    transform: scale(1.05);
+}
+
+.founder-photo {
+    width: 40%;
+    height: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.founder-card h3 {
+    font-size: 24px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.founder-card p {
+    color: black;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+
+/* Responsividad */
+@media (max-width: 992px) {
+    .container-navBar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navBar-list {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navBar-list li {
+        width: 100%;
+    }
+
+    .navBar-list li a {
+        display: block;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .sobreNosotros {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .imagenSobreNosotros {
+        max-width: 100%;
+    }
+
+    .founders-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Móviles */
+@media (max-width: 576px) {
+    .container-navBar {
+        padding: 0 10px;
+    }
+
+    .logo-navBar img {
+        width: 120px;
+    }
+
+    .navBar-list {
+        gap: 10px;
+    }
+
+    .founder-card {
+        padding: 15px;
+    }
+
+    .founder-photo {
+        max-width: 120px;
+    }
+
+    .boton-adoptar {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
 
 /* -------------------------------------------- footer ---------------------------------------------- */
 footer {
