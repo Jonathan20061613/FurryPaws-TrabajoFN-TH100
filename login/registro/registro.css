@@ -205,12 +205,14 @@
 
 /* Inputs */
 input {
-    width: 100%;
+    width: 80%; /* Ajuste del ancho */
+    max-width: 300px; /* Limita el tamaño máximo */
     padding: 12px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 8px;
     transition: border-color 0.3s;
+    box-sizing: border-box; /* Asegura que el padding no altere el tamaño */
 }
 
 input:focus {
@@ -222,7 +224,8 @@ input:focus {
 .links {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 80%; /* Alinea con los inputs */
+    max-width: 300px;
 }
 
 .links a {

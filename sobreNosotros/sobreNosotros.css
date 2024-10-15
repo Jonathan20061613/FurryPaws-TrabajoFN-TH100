@@ -1,46 +1,33 @@
-/* ----------------------------------------- import styles ------------------------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+/* IMPORTAR FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&display=swap');
-/* ----------------------------------------- * ------------------------------------------------- */
 
-/* ----------------------------------------- GLOBAL STYLES ------------------------------------------------- */
-
-
-/* ----------------------------------------- VARIABLES ------------------------------------------------- */
+/* VARIABLES */
 :root {
-    /* tipografía */
     --fuente1: "Figtree", serif;
     --fuente2: "IBM Plex Mono", monospace;
-    /* colores */
-    --color-primary: #000000;
-    --color-secundary: #ffffff;
+    --color-primary: #000;
+    --color-secundary: #fff;
+    --backgroundColor: #c4c5c6;
     --color-1: #1a8510;
     --color-2: #012A4A;
-    --color-3: #A3CEF1;
-    --backgroundColor: #c4c5c6;
-    --colorPrimary1: #ff70a6;
-    --colorPrimary2: #ffd670;
     --colorPrimary3: #8AC6DD;
-    --colorPrimary4: #FF9770;
-    --colorPrimary: #449b5b;
-    --textColor: #000;
-    --colorbottonlogin: white;
-    
-
-
-    --tipography: 'Arial Narrow', sans-serif;
-    font-family: Arial, sans-serif;
-    --tipography1: "Edu AU VIC WA NT Dots", cursive;
-
 }
 
-
+/* GLOBAL */
+body {
+    font-family: var(--fuente1);
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
 /* ----------------------------------------- HEADER ------------------------------------------------- */
 .header {
     margin: 0;
-    width: 100%; 
+    width: 100%; /* Ocupa todo el ancho */
+    height: 100vh; /* Ajuste automático para el contenido */
     display: flex;
     flex-direction: column; /* Contenido apilado verticalmente */
 }
@@ -116,6 +103,7 @@
     color: var(--color-secundary); /* Asegúrate de que el color sea visible */
     display: block; /* Ocupa todo el botón */
     width: 100%; /* Ocupa todo el ancho del botón */
+    line-height: 5vh; /* Asegura que el texto esté centrado verticalmente */
     text-align: center; /* Centra el texto horizontalmente */
 }
 
@@ -130,151 +118,218 @@
     color: var(--color-primary); /* Cambia el color del enlace al pasar el mouse */
 }
 
-/* ---------------------------- bannner --------------------------- */
-.banner{
-    border: solid rgba(172, 255, 47, 0.753);
-    background-color: #012A4A;
-    justify-content: center; /* centrar horizontalmente*/
-    text-align: center; /* centrar horizontalmente*/
-    align-items: center;
-    padding: 50px;
+/* -------------------------------- BANNER -------------------------------- */
+.banner {
+    width: 100%;
+    height: 83%;
+    background-color: #f5f5f5;
 }
 
-.titulo{
-    color: #ffffff;
-    size: 50%;
+.contenido-banner{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    padding-top: 3vh;
+    align-content: center;
+    text-align: center; /* Centra el texto */
+    background-color: rgba(205, 218, 220, 0.782);
+    display: flex; /* Utiliza flexbox para centrar el contenido */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+}
+
+.title-banner{
     font-family: var(--fuente1);
-    font-size: xx-large;
-    text-align:center;
-    margin-bottom: 40px;
+    font-weight: 900;
+    font-size: 150px;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.831);
+}
+
+
+.sobreNosotrosTexto{
+    width: 40%;
+    height: 20vh;
+    margin-top: 2vh;
+    padding: 20px;
+    align-content: center;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.79);
+    transition: 20px;
+    font-size: 20px;
+    font-family: var(--fuente2);
+}
+
+
+.boton-saberMas {
+    margin-top: 2vh;
+    height: auto;
+    width: auto;
+    font-size: large;
+    font-family: var(--fuente1);
+    background-color: #012A4A; /* Color de fondo normal */
+    color: white; /* Color del texto */
+    border: solid 5px #FFFFFF; /* Borde de 5px en blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno para el botón */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Asegurarse de que el botón se comporte como un bloque */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
+}
+
+.boton-saberMas a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del botón */
+    display: block; /* Hace que el enlace ocupe todo el botón */
+}
+
+.boton-saberMas:hover {
+    background-color: #fee500bd; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Mantiene el texto blanco */
+    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el mouse */
+}
+
+
+/* ---------------- SOBRE NOSOTROS ---------------- */
+#sobreNosotros {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 100%;
+    background-color: rgba(205, 218, 220, 0.9); /* Fondo más transparente */
+    padding: 70px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
+
+.titulo {
+    font-size: 40px; /* Tamaño del título */
+    font-family: var(--fuente1);
+    font-weight: bolder;
+    color: #012A4A; /* Color del título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.contenido-flex {
+    display: flex; /* Usar flexbox para alinear la imagen y el texto */
+    justify-content: center; /* Centrar contenido horizontalmente */
+    align-items: center; /* Alinear verticalmente en el centro */
+    margin: 20px 0; /* Espaciado entre el título y el contenido */
+}
+
+.imagenSobreNosotros {
+    max-width: 40%; /* Ajustar el tamaño de la imagen */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+    border-radius: 10px; /* Bordes redondeados para la imagen */
+}
+
+.contenido p {
+    border: solid 2px;
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-family: var(--fuente2);
+    width: 50%; /* Ancho del texto */
+    line-height: 1.5; /* Espacio entre líneas */
+    color: #333; /* Color del texto */
+    margin: 10px 0; /* Espaciado entre párrafos */
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.boton-adoptar {
+    margin-top: 2vh;
+    height: auto;
+    width: auto;
+    font-size: large;
+    font-family: var(--fuente1);
+    background-color: #012A4A; /* Color de fondo normal */
+    color: white; /* Color del texto */
+    border: solid 5px #FFFFFF; /* Borde de 5px en blanco */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno para el botón */
+    text-align: center; /* Centrar el texto */
+    display: inline-block; /* Asegurarse de que el botón se comporte como un bloque */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave para color y transformación */
+}
+
+.boton-adoptar a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: inherit; /* Hereda el color del botón */
+    display: block; /* Hace que el enlace ocupe todo el botón */
+}
+
+.boton-adoptar:hover {
+    background-color: #fc51ffa8; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Mantiene el texto blanco */
+    transform: scale(1.05); /* Aumenta el tamaño del botón al pasar el mouse */
+}
+
+/* ---------------- FUNDADORES ---------------- */
+.founders-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa; /* Color de fondo suave */
+    text-align: center;
+    border-bottom: 5px solid #012A4A; /* Línea de separación */
+}
+
+.titulo-Fundadores {
+    margin-bottom: 5vh;
 }
 
 .founders-container {
     display: flex;
     justify-content: center;
-    width: 100%;
-   
+    gap: 30px;
+    flex-wrap: wrap;
 }
 
 .founder-card {
-    background-color:var(--backgroundColor);
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    background-color: #ffffff; /* Fondo blanco para mayor contraste */
+    border-radius: 15px;
     padding: 20px;
-    margin: 20px;
     text-align: center;
-    transition: transform 0.3s ease;
-    width: 40%;
-   
-    
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative; /* Para el efecto de fondo */
+    overflow: hidden; /* Para ocultar el desbordamiento del efecto */
 }
 
 .founder-card:hover {
-    transform: scale(1.05);
+    transform: translateY(-5px); /* Eleva la tarjeta ligeramente al pasar el mouse */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .founder-photo {
-    width: 40%;
-    height: 50%;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 20px;
+    width: 150px;   /* Ancho fijo */
+    height: 150px;  /* Alto fijo */
+    border-radius: 50%; /* Círculo perfecto */
+    object-fit: cover; /* Mantiene el aspecto proporcional */
+    margin-bottom: 15px;
+    border: 5px solid #012A4A; /* Borde para la imagen */
+    transition: transform 0.3s ease; /* Animación para la imagen */
+}
+
+.founder-card:hover .founder-photo {
+    transform: scale(1.1); /* Aumenta la imagen al pasar el mouse */
 }
 
 .founder-card h3 {
-    font-size: 24px;
-    color: black;
+    font-family: var(--fuente2);
+    font-size: 1.5rem;
+    color: #012A4A; /* Color del texto */
     margin-bottom: 10px;
 }
 
 .founder-card p {
-    color: black;
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: var(--fuente1);
+    font-size: 1rem;
+    color: #555; /* Color de texto más suave */
+    line-height: 1.5;
+    padding: 0 10px; /* Espaciado lateral para el texto */
 }
-
-
-/* Responsividad */
-@media (max-width: 992px) {
-    .container-navBar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .navBar-list {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .navBar-list li {
-        width: 100%;
-    }
-
-    .navBar-list li a {
-        display: block;
-        width: 100%;
-        padding: 10px 0;
-    }
-
-    .sobreNosotros {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .imagenSobreNosotros {
-        max-width: 100%;
-    }
-
-    .founders-container {
-        flex-direction: column;
-        align-items: center;
-    }
-}
-
-/* Móviles */
-@media (max-width: 576px) {
-    .container-navBar {
-        padding: 0 10px;
-    }
-
-    .logo-navBar img {
-        width: 120px;
-    }
-
-    .navBar-list {
-        gap: 10px;
-    }
-
-    .founder-card {
-        padding: 15px;
-    }
-
-    .founder-photo {
-        max-width: 120px;
-    }
-
-    .boton-adoptar {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-
-
-/* -------------------------------------------- footer ---------------------------------------------- */
+/* FOOTER */
 footer {
     background-color: var(--color-2);
-    color: var(--color-secundary); /* Color del texto en el pie de página */
+    color: var(--color-secundary);
     padding: 20px;
+    text-align: center;
 }
-
-footer a {
-    color: var(--color-secundary); /* Color de los enlaces en el pie de página */
-    text-decoration: none; /* Sin subrayado */
-}
-
-footer a:hover {
-    text-decoration: underline; /* Subrayado en hover */
-}
-
-
